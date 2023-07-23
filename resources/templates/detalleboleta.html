@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ventas</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="card">
+			<div class="card-header text-white bg-dark" th:text="${titulo}"></div>
+		  	<div class="card-body">
+		  		<a class="btn btn-secondary w-100 mb-2" th:href="@{/boleta/listaboletas} ">Regresar</a>
+		  		<ul class="list-group">
+		  			<li class="list-group-item" th:text="'Nro: ' + ${boleta.id_Boleta}"></li>
+				  	<li class="list-group-item" th:text="'DNI: ' + ${boleta.cliente.dni}"></li>
+				  	<li class="list-group-item" th:text="'Cliente: ' + ${boleta.cliente.nombre} + ' ' + ${boleta.cliente.apellido}"></li>
+				  	<li class="list-group-item" th:text="'Direccion: ' + ${boleta.cliente.direccion}"></li>
+				  	<li class="list-group-item" th:text="'Dni: ' + ${boleta.cliente.dni}"></li>
+				  	
+				</ul>
+				<table class="table table-striped mt-2">
+					<thead>
+						<tr>
+							<th>Producto</th>
+							<th>Precio</th>
+							<th>Cantidad</th>
+							<th>Subtotal (S/)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item: ${boleta.items}">
+							<td th:text="${item.producto.nombre}"></td>
+							<td th:text="'S/ ' + ${item.producto.precio_venta}"></td>
+							<td th:text="${item.cantidad}"></td>
+							<td th:text="'S/ ' + ${item.calcularSubtotal}"></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="fw-bold" colspan="3">TOTAL:</td>
+							<td class="fw-bold" th:text="'S/ ' + ${boleta.calcularTotal}"></td>
+						</tr>
+					</tfoot>
+				</table>
+		  	</div>
+		</div>
+	</div>
+	
+</body>
+</html>

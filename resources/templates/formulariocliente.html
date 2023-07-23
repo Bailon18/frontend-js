@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/formP.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header id="header">
+  <nav class="menu">
+    <div class="logo-box">
+      <a href="#"><img src="/static/imagenes/LOGO_empresa.png" alt=""></a>
+      <span class="btn-menu"><i class="fas fa-bars"></i></span>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form method="post" id="clienteForm" class="form_cliente" enctype="multipart/form-data">
+          <input type="hidden" id="id_Cliente" />
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombre Cliente</span>
+              <input type="text" name="nombre" id="nombre" placeholder="Nombre del cliente" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Apellido Cliente</span>
+              <input type="text" name="apellido" id="apellido" placeholder="Apellido del Producto :" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Dni</span>
+              <input type="number" name="dni" id="dni" placeholder="DNI :" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Fecha Nacimiento</span>
+              <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="0000-00-00" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Telefono</span>
+              <input type="number" name="telefono" id="telefono" placeholder="Teléfono :" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Dirección</span>
+              <input type="text" name="direccion" id="direccion" placeholder="Dirección :" required />
+            </div>
+          </div>
+          <div class="select">
+            <select name="genero" id="genero" class="form-select" required>
+              <option value="" disabled selected>Selecciona un género</option>
+              <!-- Aquí se agregarán las opciones de género desde JavaScript -->
+            </select>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/cliente_formulario.js"></script>
+  </body>
+
+</html>

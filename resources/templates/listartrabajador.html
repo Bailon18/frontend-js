@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Productos</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bodys">
+    <nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <div class="text logo-text">
+            <span>
+              <img class="image" src="/imagenes/icono_pagina.png" alt="" />
+            </span>
+          </div>
+
+          <div class="text logo-text">
+            <br /><br /><br /><br /><br />
+            <span class="name">Shadai Import Erl</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="listarproducto">
+                <i class="bx bxl-product-hunt icon"></i>
+                <span class="text nav-text">Productos</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="listartrabajador">
+                <i class="bx bxs-group icon"></i>
+                <span class="text nav-text">Trabajador</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="listarcliente">
+                <i class="bx bxs-user-check icon"></i>
+                <span class="text nav-text">Cliente</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="boleta/listaboletas">
+                <i class="bx bxl-shopify icon"></i>
+                <span class="text nav-text">Boletas</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="listarcargo">
+                <i class="bx bxs-briefcase-alt-2 icon"></i>
+                <span class="text nav-text">Cargo</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="listarcategoria">
+                <i class="bx bxs-category icon"></i>
+                <span class="text nav-text">Categoria</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="listargenero">
+                <i class="bx bx-male-female icon"></i>
+                <span class="text nav-text">Genero</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <div class="btnsalir">
+                <form class="bx bx-log-out icon" action="/logout" method="post">
+                  <button class="brr" type="submit">Logout</button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <div class="container p-4">
+        <h2 class="section__title">MANTENIMIENTO TRABAJADORES</h2>
+        <a href="/templates/formularioproducto.html" class="bnuevo">Nuevo Trabajador</a>
+        <a></a>
+        <table class="table table-striped" id="productosTable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>DNI</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Teléfono</th>
+              <th>Email</th>
+              <th>Cargo</th>
+              <th class="text-center" colspan="2">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se llenará la tabla con los datos del API REST -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/trabajador.js"></script>
+  </body>
+</html>

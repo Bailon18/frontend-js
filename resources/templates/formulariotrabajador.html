@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/formP.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <div class="text logo-text">
+          <span>
+            <img class="image" src="/imagenes/icono_pagina.png" alt="" />
+          </span>
+        </div>
+
+        <div class="text logo-text">
+          <br /><br /><br /><br /><br />
+          <span class="name">Shadai Import Erl</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form id="productTrabajador" method="post" class="form_trabajador" enctype="multipart/form-data">
+          <input type="hidden" id="id_Trabajador" />
+
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombre Trabajador</span>
+              <input type="text" name="nombre" id="nombre" placeholder="Nombre del trabajador" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Apellidos Trabajador</span>
+              <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos del trabajador" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Dni</span>
+              <input type="number" name="dni" id="dni" placeholder="Dni del trabajador" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Fecha de Nacimiento</span>
+              <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="0000-00-00" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Teléfono</span>
+              <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="email" name="email" id="email" placeholder="Email" required />
+            </div>
+          </div>
+          <div class="select">
+            <select name="cargo" id="cargo" class="form-select" required>
+              <option value="" disabled selected>Selecciona un cargo</option>
+              <!-- Aquí se agregarán las opciones de género desde JavaScript -->
+            </select>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/trabajador_formulario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+	<!-- Menu de Navegacion -->
+    <header th:fragment="menuNavegacion" class="headerr">
+      
+        <div class="container logo-nav-container">
+           <div class="logo"><img th:src="@{/imagenes/LOGO_empresa.png}" alt="Logo de Shaddai Import"></div>
+           <span class="menu-icon"> Ver menu </span>
+  
+           <nav class="navegacion">
+              <ul>
+                 <li><a th:href="home">Home</a></li>
+                 <li><a th:href="catalogo">Catalogo</a></li>
+                 <li><a th:href="contactenos"> Contactanos</a></li>
+                 <li><a th:href="listarcliente">Back</a></li>
+              </ul>
+           </nav>
+        </div>
+     </header>
+</html>

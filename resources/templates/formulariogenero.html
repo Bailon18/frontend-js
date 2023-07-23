@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Registration Form | CodingLab</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="css/formP.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header id="header">
+      <nav class="menu">
+        <div class="logo-box">
+          <a href="#"><img src="/static/imagenes/LOGO_empresa.png" alt="" /></a>
+          <span class="btn-menu"><i class="fas fa-bars"></i></span>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form method="post" id="generoForm" class="form_genero" enctype="multipart/form-data">
+          <input type="hidden" id="id_Genero" />
+
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Descripcion</span>
+              <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion del género :" required />
+            </div>
+          </div>
+
+          <div class="button">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/genero_formulario.js"></script>
+  </body>
+</html>

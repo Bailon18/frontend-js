@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+<title>Error: 404</title>
+</head>
+<body>
+	<header id="header">
+		<nav class="menu">
+			<div class="logo-box">
+				<a href="#"><img th:src="@{/imagenes/LOGO_empresa.png}" alt=""></a>
+				<span class="btn-menu"><i class="fas fa-bars"></i></span>
+			</div>
+
+			<div class="list-container">
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="card text-white bg-danger">
+			<div class="card-header">Error: 404</div>
+			<div class="card-body">
+				<h5 class="card-title">¡Página no Encontrada!</h5>
+				<p class="card-text py-3">
+					Lo sentimos <span sec:authentication="name" class="fw-bold"></span>, esta página no existe :(
+				</p>
+				<a class="btn btn-outline-light" th:href="@{/home}">Ir a Inicio</a>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

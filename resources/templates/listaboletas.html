@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Productos</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body class="bodys">
+
+    <nav class="sidebar ">
+        <header>
+            <div class="image-text">
+                <div class="text logo-text">
+                <span >
+                    <img class="image"th:src="@{/imagenes/icono_ pagina.png}" alt=""> 
+                </span>
+            </div>
+
+                <div class="text logo-text">
+                    <br><br><br><br><br>
+                    <span class="name">Shadai Import Erl</span>
+                    
+                </div>
+            </div>
+
+           
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                         <a th:href="@{/listarproducto}">
+                             <i class='bx bxl-product-hunt icon'></i>
+                             <span class="text nav-text">Productos</span>
+                         </a>
+                     </li>
+ 
+                     <li class="nav-link">
+                         <a th:href="@{/listartrabajador}">
+                             <i class='bx bxs-group icon'></i>
+                             <span class="text nav-text">Trabajador</span>
+                         </a>
+                     </li>
+ 
+                     <li class="nav-link">
+                         <a th:href="@{/listarCliente}">
+                             <i class='bx bxs-user-check icon'></i>
+                             <span class="text nav-text">Cliente</span>
+                         </a>
+                     </li>
+ 
+                     <li class="nav-link">
+                         <a th:href="@{/boleta/listaboletas}">
+                             <i class='bx bxl-shopify icon'></i>
+                             <span class="text nav-text">Boletas</span>
+                         </a>
+                     </li>
+ 
+                     <li class="nav-link">
+                         <a th:href="@{/listarCargo}">
+                              <i class='bx bxs-briefcase-alt-2 icon'></i>
+                             <span class="text nav-text">Cargo</span>
+                         </a>
+                     </li>
+ 
+                     <li class="nav-link">
+                         <a th:href="@{/listarCategoria}">
+                             <i class='bx bxs-category icon'></i>
+                             <span class="text nav-text">Categoria</span>
+                         </a>
+                     </li>
+                     <li class="nav-link">
+                         <a th:href="@{/listarGenero}">
+                             <i class='bx bx-male-female icon'></i>
+                             <span class="text nav-text">Genero</span>
+                         </a>
+                     </li>
+
+                    <li class="nav-link">
+                        
+                        
+                        <div sec:authorize="isAuthenticated() " class="btnsalir">
+							<form class='bx bx-log-out icon'  th:action="@{/logout}" method="post">
+							<button class="brr" type="submit">Logout</button>
+								
+							</form>
+						</div>
+                            
+                        </li>
+                    
+
+                </ul>
+            </div>
+
+            
+        </div>
+
+    </nav>
+
+    
+        
+        
+    <main id="main">
+		<div class="container p-4">
+			<h2 class="section__title">REPORTE BOLETAS</h2>
+			
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+                        <th>ID</th>
+                        <th>FECHA DE VENTA</th>
+                        <th>TOTAL</th>
+                        <th class="text-center" colspan="2">Acciones</th>
+                    </tr>
+				</thead>
+
+
+				<tr th:each="boleta: ${boletas}">
+                    <td th:text="${boleta.id_Boleta}"></td>	
+                    <td th:text="${boleta.fechacreacion}"></td>
+                    <td th:text="'S/ ' + ${boleta.calcularTotal()}"></td>
+                    <td><a class="btn btn-warning w-100"
+                        th:href="@{/boleta/detalleboleta/} + ${boleta.id_Boleta}"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                fill="white" class="bi bi-eye" viewBox="0 0 16 16">
+                            <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                            <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                        </svg>
+                    </a></td>
+                </tr>
+			</table>
+		</div>
+
+	</main>
+          
+       
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    
+
+
+
+</body>
+</html>

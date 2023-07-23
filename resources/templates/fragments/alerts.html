@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+    <div th:fragment="alerts">
+        <div class="alert alert-success" th:if="${info != null}" th:text="${info}"></div>
+        <div class="alert alert-danger" th:if="${alert != null}" th:text="${alert}"></div>
+        <div class="alert alert-info" th:if="${edit != null}" th:text="${edit}"></div>
+    </div>
+</html>

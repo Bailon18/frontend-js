@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<table th:fragment="plantilla" class="d-none">
+		<tbody id="productosPlantilla">
+			<tr id="fila_{ID}">
+				<td class="d-none">
+					<input type="hidden" value="{ID}" name="id_Producto[]">
+				</td>
+				<td>{NOMBRE}</td>
+				<td>S/ {PRECIO}</td>
+				<td>
+					<input class="from-control w-25" type="number" min="1" value="1" name="cantidad[]" id="cantidad_{ID}" onchange="calcularSubtotal({ID}, {PRECIO}, this.value);">
+				</td>
+				<td id="subtotal_{ID}">S/ 0</td>
+				<td>
+					<a class="btn btn-danger" onclick="eliminarProducto({ID});">X</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</html>
